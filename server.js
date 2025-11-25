@@ -125,6 +125,8 @@ app.post('/webhook', async (req, res) => {
 // SERVER LISTEN (Railway / Local)
 // =============================================
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-  console.log(`🚀 BOT Autônomos rodando na porta ${PORT} (versão mínima)`);
+    console.log(`🚀 BOT Autônomos rodando na porta ${PORT}`);
 });
+
