@@ -1,4 +1,20 @@
 // =============================================
+// Handlers globais para evitar crash no Railway
+// =============================================
+process.on("uncaughtException", err => {
+    console.error("🔥 ERRO FATAL (uncaughtException):", err);
+});
+
+process.on("unhandledRejection", err => {
+    console.error("🔥 PROMISE SEM CATCH (unhandledRejection):", err);
+});
+
+// =============================================
+// Resto do seu server.js original aqui
+// =============================================
+
+// (Cole abaixo o conteúdo original do seu server.js, mantendo o restante igual)
+// =============================================
 // Carrega variáveis de ambiente (.env local / Railway)
 // =============================================
 const express = require('express');
